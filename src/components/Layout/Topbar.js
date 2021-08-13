@@ -45,13 +45,23 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Topbar = () => {
+const Topbar = ({ setOpen, open }) => {
     const classes = useStyles();
     return (
         <AppBar className={classes.root} color="default">
             <Toolbar className={classes.toolbar}>
                 <Box display="flex" alignItems="center">
-                    <MenuIcon />
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        onClick={() => {
+                            setOpen(!open);
+                        }}
+                        edge="start"
+                    >
+                        <MenuIcon />
+                    </IconButton>
+
                     <img
                         src="/new-youtube-logo.svg"
                         alt="logo"

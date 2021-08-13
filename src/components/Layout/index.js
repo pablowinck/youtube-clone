@@ -1,5 +1,6 @@
-import { makeStyles } from "@material-ui/core";
+import { Hidden, makeStyles } from "@material-ui/core";
 import Head from "next/head";
+import { useState } from "react";
 import Navbar from "./Navbar";
 import Topbar from "./Topbar";
 
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         overflow: "hidden",
         width: "100vw",
     },
-    wrapper: {
+    wrapperOpen: {
         display: "flex",
         flex: "1 1 auto",
         overflow: "hidden",
@@ -30,10 +31,21 @@ const useStyles = makeStyles((theme) => ({
         height: "100%",
         overflow: "auto",
     },
+    wrapperClose: {
+        display: "flex",
+        flex: "1 1 auto",
+        overflow: "hidden",
+        paddingTop: 64,
+        [theme.breakpoints.up("lg")]: {
+            paddingLeft: 10,
+        },
+    },
 }));
 
 const Layout = ({ children, title }) => {
     const classes = useStyles();
+    const [open, setOpen] = useState(true);
+
     return (
         <>
             <Head>
@@ -45,9 +57,19 @@ const Layout = ({ children, title }) => {
                 />
             </Head>
             <div className={classes.root}>
-                <Topbar />
-                <Navbar />
-                <div className={classes.wrapper}>
+                <Topbar setOpen={setOpen} open={open} />
+                <Hidden smDown>
+                    <Navbar open={open} />
+                </Hidden>
+                <Hidden smUp>
+                    <Navbar open={!open} />
+                </Hidden>
+
+                <div
+                    className={
+                        open ? classes.wrapperOpen : classes.wrapperClose
+                    }
+                >
                     <div className={classes.contentContainer}>
                         <div className={classes.content}>{children}</div>
                     </div>
