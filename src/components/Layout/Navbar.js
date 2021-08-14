@@ -46,7 +46,7 @@ const primaryMenu = [
     {
         id: 3,
         label: "Inscrições",
-        path: "subscriptions",
+        path: "/subscriptions",
         icon: Subscriptions,
     },
 ];
