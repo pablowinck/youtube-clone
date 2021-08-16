@@ -52,7 +52,7 @@ export async function getStaticProps() {
             updatedAt: "2015-02-24",
         },
         {
-            id: 1,
+            id: 3,
             title: "Manutenção em Notebook",
             thumb: "thumb/thumb3.png",
             authorId: 1,
@@ -63,7 +63,7 @@ export async function getStaticProps() {
             updatedAt: "2019-02-24",
         },
         {
-            id: 2,
+            id: 4,
             title: "Como montar seu Instagram",
             thumb: "thumb/thumb01.jpg",
             authorId: 2,
@@ -74,7 +74,7 @@ export async function getStaticProps() {
             updatedAt: "2015-02-24",
         },
         {
-            id: 1,
+            id: 5,
             title: "Manutenção em Notebook",
             thumb: "thumb/thumb3.png",
             authorId: 1,
@@ -85,7 +85,7 @@ export async function getStaticProps() {
             updatedAt: "2019-02-24",
         },
         {
-            id: 2,
+            id: 6,
             title: "Como montar seu Instagram",
             thumb: "thumb/thumb01.jpg",
             authorId: 2,
@@ -96,7 +96,7 @@ export async function getStaticProps() {
             updatedAt: "2015-02-24",
         },
         {
-            id: 1,
+            id: 7,
             title: "Manutenção em Notebook",
             thumb: "thumb/thumb3.png",
             authorId: 1,
@@ -107,7 +107,7 @@ export async function getStaticProps() {
             updatedAt: "2019-02-24",
         },
         {
-            id: 2,
+            id: 8,
             title: "Como montar seu Instagram",
             thumb: "thumb/thumb01.jpg",
             authorId: 2,
